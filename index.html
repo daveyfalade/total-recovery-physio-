@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Total Recovery Physio</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f8fb;
+    color: #222;
+}
+
+header {
+    background: linear-gradient(90deg, #0077b6, #00b4d8);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 34px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav {
+    background: #023e8a;
+    padding: 12px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    color: white;
+    margin: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+}
+
+nav a:hover {
+    opacity: 0.7;
+}
+
+.hero {
+    background: url('https://images.unsplash.com/photo-1580281657521-6a5c1d0c2f6f') center/cover no-repeat;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    background: rgba(0,0,0,0.5);
+    padding: 25px 35px;
+    border-radius: 12px;
+    font-size: 44px;
+}
+
+.section {
+    padding: 50px 20px;
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+.section h2 {
+    color: #0077b6;
+    margin-bottom: 15px;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.reviews-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.review {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.stars {
+    color: gold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.booking-form {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    max-width: 500px;
+    margin: auto;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.booking-form button {
+    background: #0077b6;
+    color: white;
+    border: none;
+    padding: 14px;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.booking-form button:hover {
+    background: #023e8a;
+}
+
+footer {
+    background: #023e8a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+TOTAL RECOVERY PHYSIO
+</header>
+
+<nav>
+<a href="#">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#reviews">Reviews</a>
+<a href="#booking">Book Appointment</a>
+</nav>
+
+<section class="hero">
+<h1>Recover Faster. Move Better. Live Pain Free.</h1>
+</section>
+
+<section class="section" id="about">
+<h2>About Our Physiotherapy</h2>
+<p>
+We provide professional physiotherapy services to help you recover from injuries, reduce pain, and improve mobility. Whether you're dealing with sports injuries, back pain, or rehabilitation after surgery, our expert physiotherapists create personalised treatment plans to get you back to full strength safely and efficiently.
+</p>
+</section>
+
+<section class="section" id="services">
+<h2>Our Services</h2>
+
+<div class="services">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1581594693702-fbdc51b2763b" alt="Sports injury therapy">
+<h3>Sports Injury Treatment</h3>
+<p>Recover quickly from muscle and joint injuries with targeted rehabilitation programs.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1603398938378-e54eab446dde" alt="Back pain therapy">
+<h3>Back & Neck Pain Therapy</h3>
+<p>Specialist treatment to relieve chronic pain and improve posture and flexibility.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1580281657521-6a5c1d0c2f6f" alt="Rehabilitation therapy">
+<h3>Rehabilitation</h3>
+<p>Personalised recovery plans following surgery or injury to restore strength and movement.</p>
+</div>
+
+</div>
+</section>
+
+<section class="section" id="reviews">
+<h2>Patient Reviews</h2>
+
+<div class="reviews-container">
+
+<div class="review">
+<div class="stars">★★★★★</div>
+<p>"My back pain improved within weeks. Very professional and friendly service."</p>
+</div>
+
+<div class="review">
+<div class="stars">★★★★★</div>
+<p>"Helped me recover from a football injury faster than expected."</p>
+</div>
+
+<div class="review">
+<div class="stars">★★★★★</div>
+<p>"Excellent treatment and clear exercise plans. Highly recommend."</p>
+</div>
+
+</div>
+</section>
+
+<section class="section" id="booking">
+<h2>Book an Appointment</h2>
+
+<div class="booking-form">
+
+<form>
+<input type="text" placeholder="Full Name" required>
+<input type="tel" placeholder="Phone Number" required>
+<input type="email" placeholder="Email Address" required>
+
+<select required>
+<option value="">Select Service</option>
+<option>Sports Injury Treatment</option>
+<option>Back & Neck Pain Therapy</option>
+<option>Rehabilitation</option>
+</select>
+
+<input type="date" required>
+
+<textarea rows="4" placeholder="Describe your injury or problem"></textarea>
+
+<button type="submit">Book Appointment</button>
+
+</form>
+
+</div>
+</section>
+
+<footer>
+© 2026 Total Recovery Physio. All rights reserved.
+</footer>
+
+</body>
+</html>
