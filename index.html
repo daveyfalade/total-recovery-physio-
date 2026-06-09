@@ -1,278 +1,508 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Total Recovery Physio</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f4f8fb;
-    color: #222;
+
+html{
+scroll-behavior:smooth;
 }
 
-header {
-    background: linear-gradient(90deg, #0077b6, #00b4d8);
-    color: white;
-    padding: 20px;
-    text-align: center;
-    font-size: 34px;
-    font-weight: bold;
-    letter-spacing: 1px;
+body{
+margin:0;
+font-family:Arial,Helvetica,sans-serif;
+background:#f4f8fb;
+color:#222;
+line-height:1.6;
 }
 
-nav {
-    background: #023e8a;
-    padding: 12px;
-    text-align: center;
-    position: sticky;
-    top: 0;
+header{
+background:linear-gradient(90deg,#0077b6,#00b4d8);
+color:white;
+padding:20px;
+text-align:center;
+font-size:34px;
+font-weight:bold;
+letter-spacing:1px;
 }
 
-nav a {
-    color: white;
-    margin: 12px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: opacity 0.3s ease;
+nav{
+background:#023e8a;
+padding:15px;
+text-align:center;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
-nav a:hover {
-    opacity: 0.7;
+nav a{
+color:white;
+text-decoration:none;
+margin:15px;
+font-weight:bold;
+transition:.3s;
 }
 
-.hero {
-    background: url('https://images.unsplash.com/photo-1580281657521-6a5c1d0c2f6f') center/cover no-repeat;
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
+nav a:hover{
+opacity:.7;
 }
 
-.hero h1 {
-    background: rgba(0,0,0,0.5);
-    padding: 25px 35px;
-    border-radius: 12px;
-    font-size: 44px;
+.hero{
+position:relative;
+height:80vh;
+background:url("https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1600&auto=format&fit=crop&q=80") center center/cover no-repeat;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
 }
 
-.section {
-    padding: 50px 20px;
-    max-width: 1100px;
-    margin: auto;
-    text-align: center;
+.hero::before{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.45);
 }
 
-.section h2 {
-    color: #0077b6;
-    margin-bottom: 15px;
+.hero-content{
+position:relative;
+z-index:1;
+color:white;
 }
 
-.services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+.hero h1{
+font-size:48px;
+margin-bottom:20px;
 }
 
-.card {
-    background: white;
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-    transition: transform 0.2s ease;
+.hero-btn{
+display:inline-block;
+padding:15px 35px;
+background:#00b4d8;
+color:white;
+text-decoration:none;
+font-weight:bold;
+border-radius:8px;
+transition:.3s;
 }
 
-.card:hover {
-    transform: translateY(-6px);
+.hero-btn:hover{
+background:#0077b6;
+transform:translateY(-3px);
 }
 
-.card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 15px;
+.section{
+padding:60px 20px;
+max-width:1100px;
+margin:auto;
+text-align:center;
 }
 
-.reviews-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
+.section h2{
+color:#0077b6;
+margin-bottom:15px;
+font-size:34px;
 }
 
-.review {
-    background: white;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
 }
 
-.stars {
-    color: gold;
-    font-size: 18px;
-    margin-bottom: 10px;
+.card{
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+transition:.3s;
+cursor:pointer;
 }
 
-.booking-form {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-    max-width: 500px;
-    margin: auto;
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+.card img{
+width:100%;
+height:190px;
+object-fit:cover;
+border-radius:10px;
+margin-bottom:15px;
+}
+
+.reviews-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.review{
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.stars{
+color:gold;
+font-size:20px;
+margin-bottom:10px;
+}
+
+.booking-form{
+max-width:550px;
+margin:auto;
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.booking-form label{
+display:block;
+text-align:left;
+margin-bottom:5px;
+font-weight:bold;
 }
 
 .booking-form input,
 .booking-form select,
-.booking-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
+.booking-form textarea{
+
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border-radius:8px;
+border:1px solid #ccc;
+box-sizing:border-box;
+
 }
 
-.booking-form button {
-    background: #0077b6;
-    color: white;
-    border: none;
-    padding: 14px;
-    width: 100%;
-    font-size: 16px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s ease;
+.booking-form button{
+
+width:100%;
+padding:15px;
+background:#0077b6;
+color:white;
+border:none;
+font-size:17px;
+border-radius:8px;
+cursor:pointer;
+transition:.3s;
+
 }
 
-.booking-form button:hover {
-    background: #023e8a;
+.booking-form button:hover{
+
+background:#023e8a;
+
 }
 
-footer {
-    background: #023e8a;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+.contact{
+
+background:white;
+border-radius:15px;
+padding:30px;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+
 }
 
-@media (max-width: 600px) {
-    .hero h1 {
-        font-size: 28px;
-    }
+footer{
+
+background:#023e8a;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+
 }
+
+@media(max-width:700px){
+
+.hero{
+
+height:60vh;
+
+}
+
+.hero h1{
+
+font-size:30px;
+
+}
+
+nav a{
+
+display:inline-block;
+margin:8px;
+
+}
+
+.section{
+
+padding:40px 15px;
+
+}
+
+}
+
 </style>
+
 </head>
 
 <body>
 
 <header>
+
 TOTAL RECOVERY PHYSIO
+
 </header>
 
 <nav>
+
 <a href="#">Home</a>
 <a href="#about">About</a>
 <a href="#services">Services</a>
 <a href="#reviews">Reviews</a>
 <a href="#booking">Book Appointment</a>
+<a href="#contact">Contact</a>
+
 </nav>
 
 <section class="hero">
-<h1>Recover Faster. Move Better. Live Pain Free.</h1>
+
+<div class="hero-content">
+
+<h1>Recover Faster.<br>Move Better.<br>Live Pain Free.</h1>
+
+<a href="#booking" class="hero-btn">
+Book Your Appointment
+</a>
+
+</div>
+
 </section>
 
 <section class="section" id="about">
-<h2>About Our Physiotherapy</h2>
+
+<h2>About Us</h2>
+
 <p>
-We provide professional physiotherapy services to help you recover from injuries, reduce pain, and improve mobility. Whether you're dealing with sports injuries, back pain, or rehabilitation after surgery, our expert physiotherapists create personalised treatment plans to get you back to full strength safely and efficiently.
+
+We provide professional physiotherapy services to help patients recover from injury, reduce pain, and improve mobility. Our experienced physiotherapists create personalised treatment plans for sports injuries, chronic pain, rehabilitation, and post-operative recovery so you can return to your everyday activities safely and confidently.
+
 </p>
+
 </section>
 
 <section class="section" id="services">
+
 <h2>Our Services</h2>
 
 <div class="services">
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1581594693702-fbdc51b2763b" alt="Sports injury therapy">
+
+<img
+src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800&auto=format&fit=crop&q=80"
+alt="Sports Injury"
+loading="lazy"
+onerror="this.src='https://via.placeholder.com/800x500?text=Sports+Injury';">
+
 <h3>Sports Injury Treatment</h3>
-<p>Recover quickly from muscle and joint injuries with targeted rehabilitation programs.</p>
+
+<p>
+
+Recover from muscle, ligament and joint injuries with personalised rehabilitation programmes.
+
+</p>
+
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1603398938378-e54eab446dde" alt="Back pain therapy">
+
+<img
+src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=800&auto=format&fit=crop&q=80"
+alt="Back Pain"
+loading="lazy"
+onerror="this.src='https://via.placeholder.com/800x500?text=Back+Pain';">
+
 <h3>Back & Neck Pain Therapy</h3>
-<p>Specialist treatment to relieve chronic pain and improve posture and flexibility.</p>
+
+<p>
+
+Reduce pain, improve posture and restore movement with expert physiotherapy treatment.
+
+</p>
+
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1580281657521-6a5c1d0c2f6f" alt="Rehabilitation therapy">
+
+<img
+src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&auto=format&fit=crop&q=80"
+alt="Rehabilitation"
+loading="lazy"
+onerror="this.src='https://via.placeholder.com/800x500?text=Rehabilitation';">
+
 <h3>Rehabilitation</h3>
-<p>Personalised recovery plans following surgery or injury to restore strength and movement.</p>
+
+<p>
+
+Tailored rehabilitation plans following surgery or injury to rebuild strength and mobility.
+
+</p>
+
 </div>
 
 </div>
+
 </section>
 
 <section class="section" id="reviews">
+
 <h2>Patient Reviews</h2>
 
 <div class="reviews-container">
 
 <div class="review">
+
 <div class="stars">★★★★★</div>
-<p>"My back pain improved within weeks. Very professional and friendly service."</p>
+
+<p>
+
+"My back pain improved within weeks. The team was professional and supportive throughout my recovery."
+
+</p>
+
 </div>
 
 <div class="review">
+
 <div class="stars">★★★★★</div>
-<p>"Helped me recover from a football injury faster than expected."</p>
+
+<p>
+
+"They helped me recover from my football injury much faster than expected."
+
+</p>
+
 </div>
 
 <div class="review">
+
 <div class="stars">★★★★★</div>
-<p>"Excellent treatment and clear exercise plans. Highly recommend."</p>
+
+<p>
+
+"Excellent care, easy exercise plans and fantastic results. Highly recommended."
+
+</p>
+
 </div>
 
 </div>
+
 </section>
 
 <section class="section" id="booking">
+
 <h2>Book an Appointment</h2>
 
 <div class="booking-form">
 
-<form>
-<input type="text" placeholder="Full Name" required>
-<input type="tel" placeholder="Phone Number" required>
-<input type="email" placeholder="Email Address" required>
+<form onsubmit="bookAppointment(event)">
+
+<label>Full Name</label>
+<input type="text" required>
+
+<label>Phone Number</label>
+<input type="tel" required>
+
+<label>Email Address</label>
+<input type="email" required>
+
+<label>Select Service</label>
 
 <select required>
-<option value="">Select Service</option>
+
+<option value="">Choose a Service</option>
 <option>Sports Injury Treatment</option>
 <option>Back & Neck Pain Therapy</option>
 <option>Rehabilitation</option>
+
 </select>
+
+<label>Preferred Date</label>
 
 <input type="date" required>
 
-<textarea rows="4" placeholder="Describe your injury or problem"></textarea>
+<label>Describe Your Injury</label>
 
-<button type="submit">Book Appointment</button>
+<textarea rows="5"></textarea>
+
+<button type="submit">
+
+Book Appointment
+
+</button>
 
 </form>
 
 </div>
+
+</section>
+
+<section class="section" id="contact">
+
+<div class="contact">
+
+<h2>Contact Us</h2>
+
+<p><strong>Phone:</strong> 01234 567890</p>
+
+<p><strong>Email:</strong> info@totalrecoveryphysio.co.uk</p>
+
+<p><strong>Address:</strong> 123 High Street, London</p>
+
+</div>
+
 </section>
 
 <footer>
-© 2026 Total Recovery Physio. All rights reserved.
+
+<p>
+
+&copy; <span id="year"></span> Total Recovery Physio. All Rights Reserved.
+
+</p>
+
 </footer>
+
+<script>
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+function bookAppointment(event){
+
+event.preventDefault();
+
+alert("Thank you! Your appointment request has been submitted successfully. We will contact you shortly.");
+
+event.target.reset();
+
+}
+
+</script>
 
 </body>
 </html>
+```
